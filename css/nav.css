@@ -1,130 +1,191 @@
-*{
-    margin: 0;
-    padding: 0; 
-    box-sizing: border-box;
-}
-.container
-{
-    height: 140px;
+.navbar{
+    background-color:  hsla(0, 62%, 78%, 0.388);
+    height: 90px;
     width: 100%;
-    flex-direction: row;
-    top: 0;
+    position: sticky;
+    width: 100%;
+    z-index: 100%;
+    color: rgb(14, 15, 15);
     display: flex;
-    /*flex-wrap: wrap;*/
-    border-radius: none;
-    background-color: rgb(88, 88, 88);
-    position:fixed;
-    padding-top: -100px;
-    z-index: 1000;
-    background-color: rgb(88, 88, 88);
-    position: sticky;
+    align-items: center;
+    margin-left: 5px;
+   }
+    .home{
+margin-left: 20%;
 }
-.head
-{
-    margin: 50px 0 0 0;
-} 
-.img
-{
-   height: 90px;
-   width: 130px;
-   margin-inline-start:-1px;
-   margin-top: -20px;
-   border: 1px;
-   border-radius: 60%;
+.img1{
+    margin:10px;
+    border-radius: 50%;
 }
-.navbar
-{
-    display: flex;
-    text-align: start; 
+.Contact{
+margin-left: 7%;
 }
-#Nav
-{
-    font-size: 17px;
-    margin:70px 0 0 10px;
+.about{
+margin-left: 7%;
 }
-a{
-   color:#fff;
-   text-decoration: none;
+.feedback{
+margin-left: 7%;
 }
-a:hover{
-   color:#ff6600;
+.search{
+margin-left: 7%;
 }
-/* Mobile */
-@media (max-width:600px){
-    .ticket-container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: auto;
-        width: auto;
+.font{
+color:black;
 }
-.user-part{
-    width: 400px;
-    border-right: solid;
-    border-bottom: none;
+.font1{
+    color:#c01010;
 }
-.event-part{
-    width: 400px;
-    border-top: dashed;
-    border-left: solid;
-    height: 300px;
-}
-.event-title{
-    font-size: 18px;
+/* for tablet */
+@media screen and (min-width: 768px) and (max-width: 992px) {
 
+.navbar{
+background-color: #e699ff;
+color: #0c0c0c;
+flex-wrap: wrap;
 }
-.event-logo{
-    height: 100px;
+.f1{
+font-size: 100%;
 }
-.img-pic{
-    height: 100px;
+.home{
+    margin-left: 20%;
+}
+.search{
+display: none;
+}
+.menu-icon{
+    display: none;
+}
+.menu-list{
+display: none;
+}
+.hamburger-menu{
+display: none;
 }
 }
 
-/* Tablet */
-@media (min-width: 700px) and (max-width: 800px){
-    .ticket-container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: auto;
-        width: auto;
-    }
-    .user-part{
-    width: 600px;
-    border-right: solid;
-    border-bottom: none;
-    }
-    .event-part{
-    width: 600px;
-    border-top: dashed;
-    border-left: solid;
-    height: 300px;
-    }
-    .event-title{
-    font-size: 20px;
-    
-    }
-    .event-logo{
-        height: 130px;
-    } 
-    .img-pic{
-        height: 100px;
-    }  
-    }    
+/* for mobile */
+@media screen and (min-width: 100px) and (max-width: 768px){
+.home{
+display: none;
+}
 
-    /* Laptop */
-@media (min-width:801px) and (max-width:1024px){
-    .user-part{
-    width: 300px;
-    }
-    .event-part{
-    width: 500px;
-    }
-    .event-title{
-    font-size: 20px;
-    }
-    .event-logo{
-        height: 50%;
-    }  
+.h_booking{
+display: none;
+}
+.ticket{
+display: none;
+}
+.Contact{
+display: none;
+}
+.about{
+display: none;
+}
+.feedback{
+display: none;
+}
+.search{
+display: none;
+}
+.font{
+color: #f2f2f2;
+}
+.hamburger-menu {
+position: relative;
+display: inline-block;
+margin-left: 60%;
+align-items: center;
+}
+
+#menu-toggle {
+display: none;
+}
+
+.menu-toggle-label {
+position: relative;
+display: block;
+width: 30px;
+height: 30px;
+cursor: pointer;
+}
+
+.menu-icon {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 20px;
+height: 2px;
+background-color: rgb(56, 97, 232);
+transition: all 0.3s;
+}
+
+.menu-list {
+position: absolute;
+top: 30px;
+left: 0;
+width: 200px;
+background-color: rgb(158, 177, 237);
+list-style: none;
+padding: 0;
+margin: 0;
+display: none;
+}
+
+#menu-toggle:checked ~ .menu-list {
+display: block;
+}
+
+.menu-list li {
+padding: 10px;
+border-bottom: 1px solid #ccc;
+}
+
+.menu-list li a {
+color: #333;
+text-decoration: none;
+}
+
+.menu-list li:hover {
+background-color: #f2f2f2;
+}
+}
+/*for laptop */
+@media screen and (min-width: 992px) and (max-width: 1200px){
+.navbar{
+background-color:#e699ff;
+color: #0c0c0c;
+width: 100%;
+}
+.f1{
+font-size: 10 px;
+}
+.menu{
+    margin-left: 20%;
+}
+.img2{
+    display: none;
+}
+.menu-list{
+display: none;
+}
+.search{
+    width: 60px;
+}
+.hamburger-menu{
+display: none;
+}
+}
+/* for big screen*/
+@media screen and (min-width: 1200px) and (max-width: 3000px){
+.img2{
+display: none;
+align-items: center;
+}
+.menu-list{
+display: none;
+}
+.hamburger-menu{
+display: none;
+}
 }
